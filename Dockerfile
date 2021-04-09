@@ -1,7 +1,3 @@
-FROM alpine:3.10
+FROM node:15.14.0-alpine3.10
 
-COPY LICENSE README.md /
-
-COPY entrypoint.sh /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+RUN npm install -g yarn
