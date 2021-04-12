@@ -1,6 +1,13 @@
 name: 'Action yarn'
 description: 'Docker container with yarn installed'
 author: 'Goldwin'
+inputs:
+  command:
+    description: 'Command to run'
+    required: true
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.command }}
